@@ -75,8 +75,23 @@
   var shimmerTimer = null;
 
   function buildGrid() {
-    var cols = mqSmall.matches ? 3 : 8;
-    var rows = mqSmall.matches ? 6 : 3;
+    var small = mqSmall.matches;
+    var cols = small ? 3 : 8;
+    var rows;
+
+    if (small) {
+      /* square cells, sized in px so this grid lines up exactly with the
+         square pillar-tile grid (.hero__cards), which shares the same
+         column width but is anchored separately at the bottom */
+      var mediaRect = document.querySelector('.hero__media').getBoundingClientRect();
+      var colWidth = mediaRect.width / cols;
+      rows = Math.max(3, Math.ceil(mediaRect.height / colWidth));
+      grid.style.gridTemplateRows = 'repeat(' + rows + ',' + colWidth + 'px)';
+    } else {
+      rows = 3;
+      grid.style.gridTemplateRows = '';
+    }
+
     var total = cols * rows;
 
     grid.innerHTML = '';
@@ -92,7 +107,9 @@
     }
 
     /* a few cells lit in the mockup */
-    var lit = mqSmall.matches ? [1, 7, 13] : [0, 4, 17, 23];
+    var lit = small
+      ? [Math.floor(total * 0.15), Math.floor(total * 0.5), Math.floor(total * 0.8)]
+      : [0, 4, 17, 23];
     lit.forEach(function (i) {
       if (cells[i]) cells[i].classList.add('is-lit');
     });
