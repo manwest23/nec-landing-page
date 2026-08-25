@@ -10,7 +10,7 @@ index.html
 css/styles.css        all styles + tokens
 js/main.js            interactions
 assets/
-  video/hero-energy.mp4          1600px  (desktop hero)
+  video/v1 NEC hero.mp4          1600px  (desktop hero)
   video/hero-energy-mobile.mp4    960px  (served under 900px viewport)
   img/fa1–fa6.jpg                 6 focus-area illustrations
   img/*.jpg                       section photography

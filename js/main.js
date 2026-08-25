@@ -14,7 +14,7 @@
     var src = video.querySelector('source');
     var wanted = mqSmall.matches
       ? 'assets/video/hero-energy-mobile.mp4'
-      : 'assets/video/hero-energy.mp4';
+      : 'assets/video/v1 NEC hero.mp4';
     if (src.getAttribute('src') !== wanted) {
       src.setAttribute('src', wanted);
       video.load();
