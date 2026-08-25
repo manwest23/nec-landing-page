@@ -645,7 +645,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 }
 .comingsoon__inner{
   position:relative;z-index:1;
-  max-width:600px;
+  /* max-width:600px; */
   padding-block:clamp(60px,10vw,120px);
 }
 .comingsoon__title{
