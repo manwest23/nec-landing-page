@@ -245,6 +245,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   grid-column:var(--col);
   grid-row:var(--row);
   position:relative;
+  min-width:0;
+  min-height:0;
   pointer-events:auto;
   padding:clamp(20px,2.4vw,34px);
   display:flex;flex-direction:column;justify-content:flex-end;
@@ -297,7 +299,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 }
 .pillar-tile__name{
   font-family:var(--ff-display);
-  font-size:clamp(.95rem,2vw,1.9rem);
+  font-size:clamp(.85rem,1.6vw,1.9rem);
   font-weight:700;line-height:1.12;letter-spacing:-.015em;
 }
 .pillar-tile__more{
