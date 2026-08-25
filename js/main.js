@@ -75,6 +75,7 @@
   var shimmerTimer = null;
 
   function buildGrid() {
+    if (!grid) return;
     var small = mqSmall.matches;
     var cols = small ? 3 : 8;
     var rows;

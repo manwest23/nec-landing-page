@@ -114,7 +114,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   background:transparent;
   transition:background .4s var(--ease),backdrop-filter .4s var(--ease),box-shadow .4s var(--ease);
 }
-.site-header.is-stuck{
+.site-header.is-stuck,
+.site-header--solid{
   background:rgba(7,19,35,.92);
   backdrop-filter:saturate(150%) blur(10px);
   box-shadow:0 1px 0 rgba(255,255,255,.08);
@@ -627,7 +628,65 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .cta__apply:hover .arrow{transform:translate(6px,-6px)}
 
 /* ============================================================
-   12. FOOTER
+   12. COMING SOON (placeholder for second-layer pages)
+   ============================================================ */
+.comingsoon{
+  position:relative;
+  min-height:calc(100svh - 84px);
+  display:flex;align-items:center;
+  overflow:hidden;background:var(--paper);
+}
+.comingsoon__media{
+  position:absolute;inset:0;margin:0;z-index:0;
+}
+.comingsoon__media img{width:100%;height:100%;object-fit:cover}
+.comingsoon__media::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,#fff 0%,#fff 34%,rgba(255,255,255,.7) 50%,rgba(255,255,255,0) 68%);
+}
+.comingsoon__inner{
+  position:relative;z-index:1;
+  max-width:600px;
+  padding-block:clamp(60px,10vw,120px);
+}
+.comingsoon__title{
+  margin-top:16px;
+  font-family:var(--ff-display);
+  font-size:clamp(2.6rem,6.4vw,5rem);
+  font-weight:800;letter-spacing:-.03em;line-height:.98;
+  text-transform:uppercase;color:var(--ink);
+}
+.comingsoon__sub{
+  margin-top:22px;
+  font-family:var(--ff-display);
+  font-size:clamp(1.25rem,2vw,1.6rem);
+  font-weight:700;color:var(--ink);
+}
+.comingsoon__desc{
+  margin-top:14px;max-width:44ch;
+  font-size:clamp(.98rem,1.15vw,1.1rem);line-height:1.62;
+  color:var(--text-soft);
+}
+.comingsoon__back{
+  margin-top:34px;
+  display:inline-flex;align-items:center;gap:14px;
+  background:var(--ink);color:#fff;
+  padding:6px 6px 6px 24px;border-radius:999px;
+  font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  transition:background .3s var(--ease);
+}
+.comingsoon__back:hover{background:var(--red)}
+.comingsoon__back-icon{
+  display:grid;place-items:center;
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(255,255,255,.16);
+  color:#fff;
+}
+.comingsoon__back .arrow{transition:transform .35s var(--ease)}
+.comingsoon__back:hover .arrow{transform:translate(3px,-3px)}
+
+/* ============================================================
+   13. FOOTER
    ============================================================ */
 .site-footer{background:#fff;padding-top:clamp(44px,5vw,72px)}
 .site-footer__grid{
