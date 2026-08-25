@@ -701,26 +701,17 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .nav-toggle{display:block}
 
   .hero__intro{padding-top:96px}
-  .hero__media{
-    height:auto;max-height:none;min-height:0;
-    display:flex;flex-direction:column;justify-content:flex-end;
-  }
-  .hero__grid{grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(4,1fr)}
+
+  .hero__grid{grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(6,1fr)}
   .hero__cards{
-    position:relative;inset:auto;
+    top:auto;bottom:0;
     grid-template-columns:repeat(3,1fr);
-    grid-template-rows:auto;
-    padding:0;
-    gap:0;
+    grid-template-rows:auto auto;
   }
-  .pillar-tile{
-    grid-column:auto;grid-row:auto;
-    min-height:150px;padding:18px 16px 20px;
-  }
-  .pillar-tile__more{position:static;max-height:0;padding:0 16px}
-  .pillar-tile.is-open .pillar-tile__more{padding:10px 16px 4px;box-shadow:none}
-  .pillar-tile--up.is-open .pillar-tile__more{padding:10px 16px 4px;box-shadow:none}
-  .pillar-tile::before{transform:none !important;box-shadow:none !important}
+  .pillar-tile{aspect-ratio:1;justify-content:flex-end}
+  .pillar-tile--blue{grid-column:1;grid-row:1}
+  .pillar-tile--paper{grid-column:2;grid-row:2}
+  .pillar-tile--red{grid-column:3;grid-row:1}
 
   .pillars__row{grid-template-columns:1fr;gap:36px;max-width:520px}
   .pillar__media{aspect-ratio:16/10}
@@ -731,10 +722,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 @media (max-width:640px){
   :root{--pad:20px}
-  .hero__cards{grid-template-columns:1fr}
-  .pillar-tile{min-height:0;padding:18px 20px 20px}
   .pillar-tile__name br{display:none}
-  .pillar-tile__plus{top:16px;right:16px}
 
   .strategic__gallery{grid-template-columns:1fr}
   .frame--wide{aspect-ratio:16/9}

@@ -75,8 +75,8 @@
   var shimmerTimer = null;
 
   function buildGrid() {
-    var cols = mqSmall.matches ? 4 : 8;
-    var rows = mqSmall.matches ? 4 : 3;
+    var cols = mqSmall.matches ? 3 : 8;
+    var rows = mqSmall.matches ? 6 : 3;
     var total = cols * rows;
 
     grid.innerHTML = '';
@@ -91,8 +91,9 @@
       cells.push(cell);
     }
 
-    /* the four cells lit in the mockup */
-    [0, 4, 17, 23].forEach(function (i) {
+    /* a few cells lit in the mockup */
+    var lit = mqSmall.matches ? [1, 7, 13] : [0, 4, 17, 23];
+    lit.forEach(function (i) {
       if (cells[i]) cells[i].classList.add('is-lit');
     });
 
