@@ -264,6 +264,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .pillar-tile::before{
   content:"";position:absolute;inset:0;z-index:-1;
   background:var(--tint);
+  opacity:.88;
   transition:transform .45s var(--ease),box-shadow .45s var(--ease);
 }
 .pillar-tile--blue{--tint:var(--blue)}
