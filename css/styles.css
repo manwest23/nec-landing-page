@@ -717,11 +717,18 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .pillar-tile--paper{grid-column:3;grid-row:2}
   .pillar-tile--red{grid-column:1;grid-row:3}
 
-  /* red is now the bottom-row tile, so its drawer must open upward instead of paper's */
-  .pillar-tile--paper .pillar-tile__more{top:100%;bottom:auto}
-  .pillar-tile--paper.is-open .pillar-tile__more{padding:14px 20px 18px;box-shadow:0 26px 40px -24px rgba(0,0,0,.6)}
+  /* red is now the bottom-row tile, so its drawer must open upward too (paper already
+     carries --up in the markup, which is correct here since it's the middle row and a
+     downward drawer would run past the grid's bottom edge and get clipped) */
   .pillar-tile--red .pillar-tile__more{top:auto;bottom:100%}
   .pillar-tile--red.is-open .pillar-tile__more{padding:18px 20px 14px;box-shadow:0 -26px 40px -24px rgba(0,0,0,.6)}
+
+  /* narrower tiles wrap the description onto more lines than desktop's 160px cap allows */
+  .pillar-tile.is-open .pillar-tile__more{max-height:280px}
+
+  /* blue and red share a column, so an open drawer can reach into the neighbouring
+     tile's cell — float the open tile above its siblings so its text stays on top */
+  .pillar-tile.is-open{z-index:3}
 
   .pillars__row{grid-template-columns:1fr;gap:36px;max-width:520px}
   .pillar__media{aspect-ratio:16/10}
