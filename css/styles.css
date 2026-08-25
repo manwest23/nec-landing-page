@@ -179,7 +179,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   flex:none;
   padding-top:clamp(110px,9vw,150px);
   padding-bottom:clamp(22px,2.6vw,36px);
-  text-align:center;
 }
 .hero__title{
   font-family:var(--ff-display);
