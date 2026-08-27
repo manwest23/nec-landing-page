@@ -691,7 +691,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .article__banner{
   position:relative;
   background:var(--blue);
-  padding:clamp(96px,14vw,150px) 0 clamp(80px,10vw,130px);
+  padding:clamp(96px,14vw,150px) 0 clamp(28px,4vw,48px);
 }
 .article__banner-inner{max-width:640px}
 .article__date{
@@ -705,11 +705,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 }
 .article__photo{
   position:absolute;
-  top:clamp(70px,10vw,120px);right:var(--pad);
+  bottom:-56px;right:var(--pad);
   width:min(40%,480px);
   aspect-ratio:16/10.5;
   margin:0;overflow:hidden;
-  border-radius:4px;
+  border-radius:12px;
   box-shadow:0 34px 60px -22px rgba(0,0,0,.4);
   z-index:2;
 }
