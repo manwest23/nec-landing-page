@@ -692,10 +692,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   background:var(--mist);
   padding:clamp(56px,7vw,88px) 0;
 }
-.article__banner-inner{position:relative}
 .article__card{
+  position:relative;
   background:var(--blue);
-  width:min(64%,760px);
+  width:min(66%,920px);
   padding:clamp(40px,6vw,64px) clamp(28px,4vw,48px);
 }
 .article__date{
@@ -705,12 +705,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   font-family:var(--ff-display);
   font-size:clamp(1.9rem,3.6vw,2.9rem);
   font-weight:800;line-height:1.1;letter-spacing:-.02em;color:#fff;
-  max-width:15ch;
+  max-width:64%;
 }
 .article__photo{
   position:absolute;
-  top:clamp(24px,4vw,44px);left:50%;
-  width:min(38%,540px);
+  top:50%;right:-16%;
+  transform:translateY(-50%);
+  width:48%;
   aspect-ratio:16/10.5;
   margin:0;overflow:hidden;
   border-radius:12px;
@@ -793,6 +794,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .article__title{max-width:none}
   .article__photo{
     position:static;
+    transform:none;
     width:100%;
     aspect-ratio:16/10;
     margin-top:24px;
