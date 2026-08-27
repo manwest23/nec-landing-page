@@ -690,7 +690,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
    ============================================================ */
 .article__banner{
   background:var(--mist);
-  padding:clamp(56px,7vw,88px) 0;
+  padding:clamp(120px,14vw,170px) 0 clamp(56px,7vw,88px);
 }
 .article__card{
   position:relative;
