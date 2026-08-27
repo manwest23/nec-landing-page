@@ -694,7 +694,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .article__card{
   position:relative;
   background:var(--blue);
-  width:min(66%,920px);
+  width:min(74%,1040px);
   padding:clamp(56px,8vw,88px) clamp(28px,4vw,48px);
 }
 .article__date{
@@ -727,6 +727,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   font-size:clamp(.98rem,1.15vw,1.08rem);
   line-height:1.75;color:var(--text);
   margin-bottom:26px;
+  text-align:justify;
 }
 .article__quote{font-weight:600;color:var(--ink)}
 .article__tags{
@@ -791,6 +792,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 @media (max-width:760px){
   .article__card{width:100%}
   .article__title{max-width:none}
+  .article__body p{text-align:left}
   .article__photo{
     position:static;
     transform:none;
