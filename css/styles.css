@@ -689,11 +689,15 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
    13. ARTICLE (news story detail page)
    ============================================================ */
 .article__banner{
-  position:relative;
-  background:var(--blue);
-  padding:clamp(96px,14vw,150px) 0 clamp(28px,4vw,48px);
+  background:var(--mist);
+  padding:clamp(56px,7vw,88px) 0;
 }
-.article__banner-inner{max-width:640px}
+.article__banner-inner{position:relative}
+.article__card{
+  background:var(--blue);
+  width:min(64%,760px);
+  padding:clamp(40px,6vw,64px) clamp(28px,4vw,48px);
+}
 .article__date{
   display:block;color:#fff;font-weight:700;font-size:15px;margin-bottom:18px;
 }
@@ -705,12 +709,12 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 }
 .article__photo{
   position:absolute;
-  bottom:-56px;right:var(--pad);
-  width:min(40%,480px);
+  top:clamp(24px,4vw,44px);left:50%;
+  width:min(38%,540px);
   aspect-ratio:16/10.5;
   margin:0;overflow:hidden;
   border-radius:12px;
-  box-shadow:0 34px 60px -22px rgba(0,0,0,.4);
+  box-shadow:0 34px 60px -22px rgba(0,0,0,.3);
   z-index:2;
 }
 .article__photo img{width:100%;height:100%;object-fit:cover}
@@ -785,8 +789,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 }
 
 @media (max-width:760px){
-  .article__banner{padding-bottom:clamp(32px,6vw,48px)}
-  .article__banner-inner{max-width:none}
+  .article__card{width:100%}
   .article__title{max-width:none}
   .article__photo{
     position:static;
