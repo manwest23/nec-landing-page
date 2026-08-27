@@ -728,13 +728,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .article__tags{
   margin-top:12px;font-size:.92rem;color:var(--blue-link);font-weight:600;
 }
-.article__back{
-  display:inline-flex;align-items:center;gap:10px;
-  margin-top:8px;
-  color:var(--red-bright);font-size:13px;font-weight:700;
-  letter-spacing:.06em;text-transform:uppercase;
-}
-.article__back:hover .arrow{transform:translate(3px,-3px)}
 
 /* ============================================================
    14. FOOTER
