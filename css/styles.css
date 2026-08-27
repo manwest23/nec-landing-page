@@ -708,9 +708,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 }
 .article__photo{
   position:absolute;
-  top:50%;right:-16%;
+  top:50%;right:-12%;
   transform:translateY(-50%);
-  width:52%;
+  width:38%;
   aspect-ratio:16/10.5;
   margin:0;overflow:hidden;
   border-radius:12px;
