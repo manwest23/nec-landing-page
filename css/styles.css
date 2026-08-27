@@ -689,13 +689,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
    13. ARTICLE (news story detail page)
    ============================================================ */
 .article__banner{
-  padding:clamp(120px,14vw,170px) 0 clamp(24px,3vw,32px);
+  padding:clamp(120px,14vw,170px) 0 clamp(16px,2vw,24px);
 }
 .article__card{
   position:relative;
   background:var(--blue);
   width:min(74%,1040px);
-  padding:clamp(56px,8vw,88px) clamp(28px,4vw,48px);
+  padding:clamp(72px,10vw,108px) clamp(28px,4vw,48px);
 }
 .article__date{
   display:block;color:#fff;font-weight:700;font-size:15px;margin-bottom:18px;
@@ -708,9 +708,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 }
 .article__photo{
   position:absolute;
-  top:50%;right:-12%;
+  top:50%;right:-14%;
   transform:translateY(-50%);
-  width:38%;
+  width:44%;
   aspect-ratio:16/10.5;
   margin:0;overflow:hidden;
   border-radius:12px;
@@ -721,7 +721,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 .article__body{
   max-width:900px;
-  padding-block:clamp(28px,3vw,40px) clamp(60px,7vw,96px);
+  padding-block:clamp(18px,2vw,26px) clamp(60px,7vw,96px);
 }
 .article__body p{
   font-size:clamp(.98rem,1.15vw,1.08rem);
